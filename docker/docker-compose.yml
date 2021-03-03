@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  php-apache-poc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-apache-poc
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - "../.:/var/www/html"
